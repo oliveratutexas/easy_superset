@@ -1,5 +1,10 @@
 ### APACHE DONT OWN ME ###
 
+### WHAT IS SUPERSET ###
+
+Click VVVV HERE VVV TO FIND OUT VVV MORE VVV 
+https://superset.incubator.apache.org/index.html
+
 ##### How to use this project #####
 
 If you've ever tried to setup an instance of some cool, shiny project you know how much it sucks. This tries to make Superset not suck, by allowing you just literally docker-compose up and get going, no bullcrap, no extra commands.
