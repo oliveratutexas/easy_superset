@@ -37,14 +37,14 @@ services:
       - postgres:/var/lib/postgresql/data
 
   superset:
-    image: amancevice/superset:0.28.0
+    image: amancevice/superset:0.34.0
     # restart: unless-stopped
     command:
       sh -c '
       superset db upgrade &&
       superset init &&
       echo "admin1\nadmin_fn\nadmin_ln\nadmin1@admin.com\nadminpass\nadminpass\n" | fabmanager create-admin --app superset &&
-      gunicorn superset:app
+      gunicorn superset:app --timeout 1000 
       '
 
     environment:

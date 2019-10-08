@@ -68,6 +68,14 @@ AUTH_TYPE = AUTH_DB
 AUTH_USER_REGISTRATION = True
 
 
+BASE_DIR = os.path.abspath(os.path.dirname(__file__))
+
+# The file upload folder, when using models with files
+UPLOAD_FOLDER = BASE_DIR + '/app/static/uploads/'
+
+# The image upload folder, when using models with images
+IMG_UPLOAD_FOLDER = BASE_DIR + '/app/static/uploads/'
+
 class CeleryConfig(object):
     BROKER_URL = 'redis://%s:%s/0' % (REDIS_HOST, REDIS_PORT)
     CELERY_IMPORTS = ('superset.sql_lab', )
